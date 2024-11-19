@@ -7,7 +7,8 @@ export const func = <T extends DataType>(
         locals: NameTypePair[],
         returnType: T,
     },
-    body: Instr[] | null
+    body: Instr[] | null,
+    exportName: string | null
 ): Func<T> => ({
     __nodeType: "func",
     dataType: signature.returnType,
@@ -15,7 +16,8 @@ export const func = <T extends DataType>(
     params: signature.params,
     locals: signature.locals,
     returnType: signature.returnType,
-    body
+    body,
+    exportName
 });
 
 export const add = <T extends NumericDataType>(

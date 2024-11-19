@@ -20,6 +20,7 @@ export type Func<T extends DataType> = {
     locals: NameTypePair[];
     returnType: T;
     body: Instr[] | null;
+    exportName: string | null
 }
 
 export type Add<T extends NumericDataType> = {

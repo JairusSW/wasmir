@@ -68,7 +68,7 @@ export const compile = (mod: Module) => {
             ...mod.funcs.map(func =>
                 compileSExpression({
                     fn: "func",
-                    inlineArgs: ["$" + func.name],
+                    inlineArgs: ["$" + func.name, func.exportName ? "(export \"" + func.name + "\")" : undefined],
                     blockArgs: [
                         ...func.params.map(
                             ([dt, name]) => space(2) + `(param $${name} ${dt})`,
