@@ -1,4 +1,5 @@
-import { add, func, local } from "./methods";
+import Long from "long";
+import { add, constant, func, i32, local } from "./methods";
 import { Module } from "./module";
 
 const mod = new Module();

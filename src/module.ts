@@ -1,5 +1,5 @@
 import { compile } from "./compiler";
-import { DataType, Func } from "./nodes";
+import { DataType, Func } from "./types";
 
 export class Module {
     public funcs: Func<DataType>[] = [];
