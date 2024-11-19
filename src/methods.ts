@@ -1,5 +1,5 @@
 import Long from "long";
-import { DataType, Func, Add, Instr, NameTypePair, NumericDataType, LocalGet, Const, I32, I64, Sub, Mul, DivSigned, DivUnsigned, Equal, NotEqual, LessThanSigned, LessThanUnsigned, LessEqualSigned, LessEqualUnsigned, GreaterThanSigned, GreaterThanUnsigned, GreaterEqualSigned, GreaterEqualUnsigned } from "./types";
+import { DataType, Func, Add, Instr, NameTypePair, NumericDataType, LocalGet, Const, I32, I64, Sub, Mul, DivSigned, DivUnsigned, Equal, NotEqual, LessThanSigned, LessThanUnsigned, LessEqualSigned, LessEqualUnsigned, GreaterThanSigned, GreaterThanUnsigned, GreaterEqualSigned, GreaterEqualUnsigned } from "./instructions/core";
 
 export const func = <T extends DataType>(
     signature: {
@@ -52,7 +52,7 @@ export const sub = <T extends NumericDataType>(
     dataType,
     left,
     right,
-    returnType: dataType
+    returnType: dataType 
 });
 
 export const mul = <T extends NumericDataType>(
